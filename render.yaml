@@ -1,0 +1,32 @@
+services:
+  # 1. Course Microservice
+  - type: web
+    name: course-microservice
+    runtime: node
+    rootDir: course-service
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_URL
+        value: "*"
+
+  # 2. Student Microservice
+  - type: web
+    name: student-microservice
+    runtime: node
+    rootDir: student-service
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: COURSE_SERVICE_URL
+        sync: false
+      - key: FRONTEND_URL
+        value: "*"
