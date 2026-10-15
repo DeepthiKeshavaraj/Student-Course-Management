@@ -6,7 +6,7 @@ import axios from 'axios';
  * NEVER import Course model or direct DB connection here.
  */
 const getCourseServiceClient = () => {
-  const baseURL = process.env.COURSE_SERVICE_URL || 'http://localhost:5002';
+  const baseURL = process.env.COURSE_SERVICE_URL || 'http://localhost:5006';
   return axios.create({
     baseURL,
     timeout: 5000,

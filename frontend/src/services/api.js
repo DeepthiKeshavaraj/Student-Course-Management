@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // Backend Base URLs from environment variables
-const STUDENT_API_BASE = import.meta.env.VITE_STUDENT_API_URL || 'http://localhost:5001';
-const COURSE_API_BASE = import.meta.env.VITE_COURSE_API_URL || 'http://localhost:5002';
+const STUDENT_API_BASE = import.meta.env.VITE_STUDENT_API_URL || 'http://localhost:5005';
+const COURSE_API_BASE = import.meta.env.VITE_COURSE_API_URL || 'http://localhost:5006';
 
 // Create Axios instances
 export const studentApi = axios.create({

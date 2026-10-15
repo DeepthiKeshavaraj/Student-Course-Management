@@ -155,7 +155,7 @@ export const getStudentCourses = async (req, res, next) => {
       });
     }
 
-    const courseServiceUrl = process.env.COURSE_SERVICE_URL || 'http://localhost:5002';
+    const courseServiceUrl = process.env.COURSE_SERVICE_URL || 'http://localhost:5006';
 
     // Inter-Service Call: Request course details from Course Service
     const courseResult = await fetchMultipleCourses(student.courseIds);

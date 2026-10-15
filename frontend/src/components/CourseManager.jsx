@@ -65,7 +65,7 @@ export default function CourseManager({
             <PlusCircle size={20} color="var(--primary)" />
             Add New Course
           </h2>
-          <span className="badge badge-gray">Course Service (:5002)</span>
+          <span className="badge badge-gray">Course Service (:5006)</span>
         </div>
 
         <div className="panel-body">

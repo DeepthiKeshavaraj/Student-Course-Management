@@ -28,7 +28,7 @@ export default function Navbar({
           >
             <span className="pulse-dot"></span>
             <Server size={14} />
-            <span>Student Service (:5001) {studentHealth.online ? 'UP' : 'DOWN'}</span>
+            <span>Student Service (:5005) {studentHealth.online ? 'UP' : 'DOWN'}</span>
           </div>
 
           {/* Course Service Status */}
@@ -38,7 +38,7 @@ export default function Navbar({
           >
             <span className="pulse-dot"></span>
             <Server size={14} />
-            <span>Course Service (:5002) {courseHealth.online ? 'UP' : 'DOWN'}</span>
+            <span>Course Service (:5006) {courseHealth.online ? 'UP' : 'DOWN'}</span>
           </div>
 
           {/* Refresh Data */}

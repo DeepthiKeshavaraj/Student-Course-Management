@@ -84,14 +84,14 @@ export default function StudentCourseDetails({
           </div>
           <div className="arch-node" style={{ borderColor: '#818cf8' }}>
             <div>Student Service</div>
-            <small style={{ color: '#cbd5e1' }}>Port 5001 (Owner of Students)</small>
+            <small style={{ color: '#cbd5e1' }}>Port 5005 (Owner of Students)</small>
           </div>
           <div className="arch-arrow">
             ── Axios HTTP GET /api/courses/:id ──►
           </div>
           <div className="arch-node" style={{ borderColor: '#38bdf8' }}>
             <div>Course Service</div>
-            <small style={{ color: '#cbd5e1' }}>Port 5002 (Owner of Courses)</small>
+            <small style={{ color: '#cbd5e1' }}>Port 5006 (Owner of Courses)</small>
           </div>
         </div>
       </div>

@@ -189,7 +189,7 @@ export default function App() {
                 </div>
                 <div className="arch-node" style={{ borderColor: '#818cf8', background: 'rgba(99, 102, 241, 0.25)' }}>
                   <div style={{ fontWeight: 700 }}>Student Service</div>
-                  <small style={{ color: '#cbd5e1' }}>Port 5001 • Node/Express</small>
+                  <small style={{ color: '#cbd5e1' }}>Port 5005 • Node/Express</small>
                   <div style={{ fontSize: '0.72rem', marginTop: 4, color: '#a5b4fc' }}>
                     <Database size={11} style={{ verticalAlign: 'middle', marginRight: 3 }} />
                     DB: student_service_db
@@ -200,7 +200,7 @@ export default function App() {
                 </div>
                 <div className="arch-node" style={{ borderColor: '#38bdf8', background: 'rgba(14, 165, 233, 0.25)' }}>
                   <div style={{ fontWeight: 700 }}>Course Service</div>
-                  <small style={{ color: '#cbd5e1' }}>Port 5002 • Node/Express</small>
+                  <small style={{ color: '#cbd5e1' }}>Port 5006 • Node/Express</small>
                   <div style={{ fontSize: '0.72rem', marginTop: 4, color: '#7dd3fc' }}>
                     <Database size={11} style={{ verticalAlign: 'middle', marginRight: 3 }} />
                     DB: course_service_db
@@ -222,7 +222,7 @@ export default function App() {
                       1. Manage Courses
                     </h4>
                     <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: 14 }}>
-                      Create courses in the independent Course Service running on port 5002.
+                      Create courses in the independent Course Service running on port 5006.
                     </p>
                     <button className="btn btn-secondary btn-sm" onClick={() => setActiveTab('courses')}>
                       Go to Courses <ArrowRight size={14} />
@@ -235,7 +235,7 @@ export default function App() {
                       2. Enroll Students
                     </h4>
                     <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: 14 }}>
-                      Register students and reference course IDs in the Student Service running on port 5001.
+                      Register students and reference course IDs in the Student Service running on port 5005.
                     </p>
                     <button className="btn btn-secondary btn-sm" onClick={() => setActiveTab('students')}>
                       Go to Students <ArrowRight size={14} />
@@ -295,7 +295,7 @@ export default function App() {
           <strong>Student–Course Management System</strong> • MERN Microservices Practical Examination Project (20 Marks)
         </p>
         <p style={{ fontSize: '0.74rem', marginTop: 4, color: '#94a3b8' }}>
-          Student Service (:5001) • Course Service (:5002) • Vite React Frontend (:5173) • MongoDB Separate Databases
+          Student Service (:5005) • Course Service (:5006) • Vite React Frontend (:5173) • MongoDB Separate Databases
         </p>
       </footer>
     </div>

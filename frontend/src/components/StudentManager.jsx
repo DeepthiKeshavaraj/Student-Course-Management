@@ -76,7 +76,7 @@ export default function StudentManager({
             <UserPlus size={20} color="var(--primary)" />
             Add New Student
           </h2>
-          <span className="badge badge-gray">Student Service (:5001)</span>
+          <span className="badge badge-gray">Student Service (:5005)</span>
         </div>
 
         <div className="panel-body">

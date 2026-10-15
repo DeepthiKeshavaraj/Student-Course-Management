@@ -8,8 +8,8 @@ import studentRoutes from './routes/studentRoutes.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5001;
-const COURSE_SERVICE_URL = process.env.COURSE_SERVICE_URL || 'http://localhost:5002';
+const PORT = process.env.PORT || 5005;
+const COURSE_SERVICE_URL = process.env.COURSE_SERVICE_URL || 'http://localhost:5006';
 
 // Connect to MongoDB
 connectDB();
