@@ -77,7 +77,7 @@ export default function StudentCourseDetails({
         <div className="arch-flow-diagram">
           <div className="arch-node">
             <div>React Frontend</div>
-            <small style={{ color: '#cbd5e1' }}>Port 5173</small>
+            <small style={{ color: '#cbd5e1' }}>Port 5175</small>
           </div>
           <div className="arch-arrow">
             ── GET /api/students/:id/courses ──►

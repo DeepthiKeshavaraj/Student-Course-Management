@@ -182,7 +182,7 @@ export default function App() {
               <div className="arch-flow-diagram">
                 <div className="arch-node">
                   <div style={{ fontWeight: 700 }}>React + Vite</div>
-                  <small style={{ color: '#cbd5e1' }}>Port 5173 (Vercel Ready)</small>
+                  <small style={{ color: '#cbd5e1' }}>Port 5175 (Vercel Ready)</small>
                 </div>
                 <div className="arch-arrow">
                   ── REST API ──►
@@ -295,7 +295,7 @@ export default function App() {
           <strong>Student–Course Management System</strong> • MERN Microservices Practical Examination Project (20 Marks)
         </p>
         <p style={{ fontSize: '0.74rem', marginTop: 4, color: '#94a3b8' }}>
-          Student Service (:5005) • Course Service (:5006) • Vite React Frontend (:5173) • MongoDB Separate Databases
+          Student Service (:5005) • Course Service (:5006) • Vite React Frontend (:5175) • MongoDB Separate Databases
         </p>
       </footer>
     </div>
