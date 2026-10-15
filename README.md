@@ -11,7 +11,7 @@ The application is decomposed into three completely independent applications:
 ```
                       ┌─────────────────────────────────────────┐
                       │          React Frontend (Vite)          │
-                      │               Port: 5175                │
+                      │               Port: 5174                │
                       └──────────────┬────────────┬─────────────┘
                                      │            │
             REST API (Student CRUD)  │            │ REST API (Course CRUD)
@@ -37,7 +37,7 @@ The application is decomposed into three completely independent applications:
 
 ```mermaid
 graph TD
-    Client["React Frontend (Vite) <br/> :5175"]
+    Client["React Frontend (Vite) <br/> :5174"]
     Client -->|"REST API (Student Ops)"| StudentService["Student Microservice <br/> Node.js/Express (:5005)"]
     Client -->|"REST API (Course Ops)"| CourseService["Course Microservice <br/> Node.js/Express (:5006)"]
     StudentService -->|"HTTP GET via Axios <br/> (Inter-Service Comm)"| CourseService
@@ -88,7 +88,7 @@ student-course-management/
     ├── .env.example                # Sample environment template
     ├── index.html                  # HTML entry point
     ├── package.json
-    ├── vite.config.js              # Vite configuration (:5175)
+    ├── vite.config.js              # Vite configuration (:5174)
     └── src/
         ├── App.css                 # Responsive modern styling
         ├── App.jsx                 # Dashboard orchestration & navigation
@@ -109,7 +109,7 @@ student-course-management/
 
 | Layer | Technology | Purpose |
 |---|---|---|
-| **Frontend** | React 18, Vite | High-performance SPA with modern component architecture (:5175) |
+| **Frontend** | React 18, Vite | High-performance SPA with modern component architecture (:5174) |
 | **Icons & UI** | Lucide React | Clean, intuitive icons for dashboard badges and actions |
 | **Backend** | Node.js, Express.js | Lightweight, event-driven RESTful microservices (:5005, :5006) |
 | **Database** | MongoDB & Mongoose | Document database with schema validation and separate DBs |
@@ -136,7 +136,7 @@ cd "/Users/deepthi/Desktop/Student Corse Mgt"
 ```env
 PORT=5006
 MONGODB_URI=mongodb://localhost:27017/course_service_db
-FRONTEND_URL=http://localhost:5175
+FRONTEND_URL=http://localhost:5174
 ```
 
 #### Student Service (`student-service/.env`):
@@ -144,7 +144,7 @@ FRONTEND_URL=http://localhost:5175
 PORT=5005
 MONGODB_URI=mongodb://localhost:27017/student_service_db
 COURSE_SERVICE_URL=http://localhost:5006
-FRONTEND_URL=http://localhost:5175
+FRONTEND_URL=http://localhost:5174
 ```
 
 #### Frontend (`frontend/.env`):
@@ -166,12 +166,14 @@ npm start
 cd "/Users/deepthi/Desktop/Student Corse Mgt/student-service"
 npm start
 
-# Terminal 3: Start React Frontend (runs on http://localhost:5175)
+# Terminal 3: Start React Frontend (runs on http://localhost:5174)
 cd "/Users/deepthi/Desktop/Student Corse Mgt/frontend"
 npm run dev
 ```
 
-Open your browser at **`http://localhost:5175`**.
+Open your browser at **`http://localhost:5174`**.
+
+*(Note: We chose port **5174** for the frontend, **5005** for Student Service, and **5006** for Course Service so they run smoothly side-by-side with TravelMate without any port conflicts!)*
 
 ---
 
@@ -423,7 +425,7 @@ Open your browser at **`http://localhost:5175`**.
 | **Microservices Architecture** | **6** | Independent `course-service` (:5006) & `student-service` (:5005), isolated models, separate DBs, independent execution. | Verified |
 | **REST API Implementation** | **4** | Standard HTTP verbs (`GET`, `POST`), validation (regex email, ranges), status codes (`200`, `201`, `400`, `404`, `409`), centralized error middleware. | Verified |
 | **Inter-Service Communication** | **5** | Live HTTP requests via Axios from Student Service to Course Service (`GET /api/students/:id/courses`). Handles downtime, missing IDs, and empty lists. | Verified |
-| **Deployment & Integration** | **5** | Vite React dashboard (:5175) with health monitor, dynamic `.env` configuration, CORS support, ready for Render and Vercel. | Verified |
+| **Deployment & Integration** | **5** | Vite React dashboard (:5174) with health monitor, dynamic `.env` configuration, CORS support, ready for Render and Vercel. | Verified |
 | **Total** | **20/20** | Full working MERN microservices project ready for practical demonstration. | Ready |
 
 ---
@@ -453,7 +455,7 @@ Open your browser at **`http://localhost:5175`**.
 |---|---|---|
 | `ECONNREFUSED 127.0.0.1:5006` | Course Service is not running or on wrong port. | Start Course Service in a separate terminal: `cd course-service && npm start`. |
 | `MongoDB Connection Error` | MongoDB daemon is not running locally. | Run `brew services start mongodb-community@7.0` (Mac) or check your Atlas URI. |
-| `CORS Error in Browser` | Origin not allowed in backend CORS options. | Ensure `FRONTEND_URL` in `.env` matches your browser URL (`http://localhost:5175`). |
+| `CORS Error in Browser` | Origin not allowed in backend CORS options. | Ensure `FRONTEND_URL` in `.env` matches your browser URL (`http://localhost:5174`). |
 | `Duplicate Student ID (409)` | `studentId` is marked `unique: true` in schema. | Use a different, unique Student ID or delete the old record. |
 | `Vite build fails` | Missing node_modules or invalid imports. | Run `cd frontend && npm install && npm run build`. |
 
